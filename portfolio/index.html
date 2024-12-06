@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First GitHub Page</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My GitHub Page</h1>
+        <h1>Portfolio</h1>
+        <p>This is my portfolio / 私の技術構築記録のポートフォリオです。</p>
     </header>
     <main>
-        <p>This is a simple website hosted on GitHub Pages!</p>
+        <h2>記事一覧 / Articles</h2>
+        <div class="articles">
+            <!-- 第一号記事 -->
+            <div class="card">
+                <img src="images/image1.png" alt="GitHub Pages 構築記録">
+                <div class="card-content">
+                    <h3>6 Dec 2024: GitHub Pages 構築記録</h3>
+                    <p>GitHub Pages を使ったウェブサイト構築の記録です。</p>
+                    <a href="articles/article1.html">続きを読む</a>
+                </div>
+            </div>
+            
+            <!-- 第二号記事 -->
+            <div class="card">
+                <img src="images/image2.png" alt="マークダウン記述の基本">
+                <div class="card-content">
+                    <h3>7 Dec 2024: マークダウン記述の基本</h3>
+                    <p>マークダウン記述の基本とその使い方について紹介します。</p>
+                    <a href="articles/article2.html">続きを読む</a>
+                </div>
+            </div>
+            
+            <!-- さらに記事を追加 -->
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 Your Name</p>
+        <p>&copy; 2024 Portfolio. All Rights Reserved.</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,116 @@
+/* ホームに戻るボタンを中央に配置 */
+.back-button-container {
+    display: flex; /* フレックスボックスを使用 */
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    margin: 20px 0; /* 上下の余白 */
+}
+
+/* ホームに戻るボタンのスタイル */
+.back-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ff5722; /* 鮮やかなオレンジ */
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #e64a19; /* ホバーカラー */
+    transform: scale(1.05);
+}
+
+.back-button:active {
+    background-color: #d84315; /* クリック時の色 */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95); /* クリック時に縮小 */
+}
+
+.back-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.5); /* フォーカスリング */
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+main {
+    padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.card-content a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.card-content a:hover {
+    background: #555;
+}

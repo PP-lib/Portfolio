@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>７ Dec24: マークダウン記述の基本</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* ホームに戻るボタンの中央配置とスタイル */
+        .back-button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff5722;
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
+
+        .back-button:active {
+            background-color: #d84315;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transform: scale(0.95);
+        }
+
+        .back-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.5);
+        }
+
+        /* 記事本文のスタイル */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        main h1, main h2, main h3 {
+            color: #333;
+        }
+
+        main p {
+            margin-bottom: 1em;
+        }
+
+        main ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        main li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>7 Dec24: マークダウン記述の基本</h1>
+    </header>
+    <main>
+        <h2>記事内容</h2>
+        <p>マークダウンはシンプルな記述ルールでテキストを構造化できる記法です。本記事では、基本的な使い方と記述例を紹介します。</p>
+
+        <h2>基本的な記法</h2>
+        <h3>見出し</h3>
+        <ul>
+            <li><code># 見出し1</code></li>
+            <li><code>## 見出し2</code></li>
+            <li><code>### 見出し3</code></li>
+        </ul>
+
+        <h3>太字と斜体</h3>
+        <ul>
+            <li>太字: <code>**太字**</code> → <strong>太字</strong></li>
+            <li>斜体: <code>*斜体*</code> → <em>斜体</em></li>
+        </ul>
+
+        <h3>リスト</h3>
+        <ul>
+            <li>順序なしリスト: <code>- 項目</code></li>
+            <li>順序付きリスト: <code>1. 項目</code></li>
+        </ul>
+
+        <h3>リンクと画像</h3>
+        <ul>
+            <li>リンク: <code>[リンクテキスト](https://example.com)</code></li>
+            <li>画像: <code>![代替テキスト](画像URL)</code></li>
+        </ul>
+
+        <h2>記事のポイント</h2>
+        <ul>
+            <li>Markdownは簡単で柔軟。</li>
+            <li>VS CodeやGitHub Pagesで便利に使える。</li>
+        </ul>
+    </main>
+    <footer>
+        <div class="back-button-container">
+            <a href="../index.html" class="back-button">ホームに戻る</a>
+        </div>
+    </footer>
+</body>
+</html>
