@@ -5,6 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* レイアウト全体の調整 */
+        main {
+            display: flex;
+            justify-content: space-between; /* 自己紹介と記事一覧を左右に配置 */
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 自己紹介セクションのスタイル */
+        .about-me {
+            width: 30%; /* 自己紹介を右側に配置 */
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .about-me h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-me p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .about-me ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .about-me ul li {
+            background-color: #fff;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #444;
+        }
+
+        /* イメージ図のスタイル */
+        .author-image {
+            max-width: 100px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 記事一覧のスタイル */
+        .articles {
+            width: 65%; /* 記事一覧を左側に配置 */
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .card-content {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -12,7 +87,7 @@
         <p>This is my portfolio / 私の技術構築記録のポートフォリオです。</p>
     </header>
     <main>
-        <h2>記事一覧 / Articles</h2>
+        <!-- 記事一覧 -->
         <div class="articles">
             <!-- No.1 記事 -->
             <div class="card">
@@ -23,7 +98,7 @@
                     <a href="articles/article1.html">続きを読む</a>
                 </div>
             </div>
-            
+
             <!-- No.2 記事 -->
             <div class="card">
                 <img src="images/image2.png" alt="マークダウン記述の基本">
@@ -33,19 +108,36 @@
                     <a href="articles/article2.html">続きを読む</a>
                 </div>
             </div>
+
             <!-- No.3 記事 -->
             <div class="card">
-                <img src="images/image2.png" alt="Disqusを利用したコメント欄の導入と設定">
+                <img src="images/image3.png" alt="Disqusを利用したコメント欄の導入と設定">
                 <div class="card-content">
                     <h3>8 Dec 2024: Disqusを利用したコメント欄の導入と設定</h3>
                     <p>本記事では、GitHub PagesでホストしているサイトにDisqusを使ってコメント欄を導入する方法について解説します。</p>
                     <a href="articles/article3.html">続きを読む</a>
                 </div>
             </div>
-           
-            
-            <!-- さらに記事を追加 -->
         </div>
+
+        <!-- 自己紹介 -->
+        <section class="about-me">
+            <h2>自己紹介</h2>
+            <!-- 作者のイメージ図 -->
+            <img src="images/author_image.jpg" alt="作者のイメージ図" class="author-image">
+            <p><strong>名前:</strong> 米井一平 / YONEI IPPEI</p>
+            <p>
+                <strong>プログラムスキル:</strong><br>
+                Python、Flask、HTML、JavaScript、CSS、その他。<br>
+                マイクロソフトOffice全般に精通し、VBAを活用した効率化が得意です。また、Google Apps Script (GAS) を使用したスクリプト開発にも対応可能です。
+            </p>
+            <h3>業務実績</h3>
+            <ul>
+                <li>在庫管理アプリの開発</li>
+                <li>物流ラベル出力アプリの構築</li>
+                <li>工場作業者向け作業ナビゲートシステムの作成</li>
+            </ul>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Portfolio. All Rights Reserved.</p>
