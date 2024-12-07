@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disqusを利用したコメント欄の導入と設定</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* ホームに戻るボタンの中央配置とスタイル */
+        .back-button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff5722;
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
+
+        .back-button:active {
+            background-color: #d84315;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transform: scale(0.95);
+        }
+
+        .back-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.5);
+        }
+
+        /* 記事本文のスタイル */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        main h1, main h2, main h3 {
+            color: #333;
+        }
+
+        main p {
+            margin-bottom: 1em;
+        }
+
+        main ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        main li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Disqusを利用したコメント欄の導入と設定</h1>
+    </header>
+    <main>
+        <h2>概要</h2>
+        <p>
+            本記事では、GitHub PagesでホストしているサイトにDisqusを使ってコメント欄を導入する方法について解説します。
+            Disqusはウェブサイトのコメント管理に便利なプラットフォームで、基本的な機能は無料で利用できます。
+        </p>
+
+        <h2>今日の作業内容</h2>
+        <ul>
+            <li>Disqusの導入準備
+                <ul>
+                    <li>Disqusアカウントの作成</li>
+                    <li>サイトの登録とshortnameの取得</li>
+                </ul>
+            </li>
+            <li>HTMLへの組み込み
+                <ul>
+                    <li>コメント欄を表示するためのコードを各記事ページに挿入。</li>
+                    <li>短縮名（shortname）を使ってDisqusを動作させる設定を行いました。</li>
+                </ul>
+            </li>
+            <li>CSSでデザインを調整
+                <ul>
+                    <li>コメント欄のレイアウトやスタイルを整え、サイトのデザインに統一感を持たせました。</li>
+                </ul>
+            </li>
+            <li>公開と動作確認
+                <ul>
+                    <li>GitHub Pagesに公開し、ブラウザ上でコメント欄が正しく表示されることを確認しました。</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>手順：Disqusを使ったコメント欄の追加</h2>
+        <p>Disqusの設定方法に従い、短縮名を正しく使用してください。</p>
+
+        <!-- コメント欄 -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = window.location.href;  // ページURL
+                this.page.identifier = window.location.pathname;  // 一意の識別子
+            };
+
+            (function() {  // Disqusのスクリプトを挿入
+                var d = document, s = d.createElement('script');
+                s.src = 'https://portfolio-yldpk9tlxb.disqus.com/embed.js'; // shortnameをここに入力
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>コメントを表示するには、JavaScriptを有効にしてください。</noscript>
+        <!-- コメント欄終了 -->
+    </main>
+    <footer>
+        <div class="back-button-container">
+            <a href="../index.html" class="back-button">ホームに戻る</a>
+        </div>
+        <p>&copy; 2024 Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
