@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHubとWebアプリ開発の効率的な管理方法</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .back-button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .back-button:active {
+            background-color: #388E3C;
+            transform: scale(0.95);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        main h1, main h2, main h3 {
+            color: #333;
+        }
+
+        main p {
+            margin-bottom: 1em;
+        }
+
+        main ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        main li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GitHubとWebアプリ開発の効率的な管理方法</h1>
+    </header>
+    <main>
+        <h2>概要</h2>
+        <p>
+            本記事では、Webアプリ開発プロジェクトにおけるGitHubを活用した効率的な管理方法について解説します。
+            また、プロジェクト開始1日目の具体的なタスクやスケジュール管理の手法についても紹介します。
+        </p>
+
+        <h2>今日の作業内容</h2>
+        <ul>
+            <li>GitHubリポジトリのセットアップ
+                <ul>
+                    <li>プロジェクト専用のリポジトリを作成し、README.mdを初期化。</li>
+                    <li>ディレクトリ構造を設計し、適切に分類。</li>
+                </ul>
+            </li>
+            <li>仕様書の初版作成
+                <ul>
+                    <li>プロジェクトの概要、主な機能、システム構成をMarkdown形式で記載。</li>
+                </ul>
+            </li>
+            <li>GitHub Projectsの利用
+                <ul>
+                    <li>タスクを「To Do」「In Progress」「Done」に分類。</li>
+                    <li>初期タスクとして「仕様書作成」「スケジュール設定」などを登録。</li>
+                </ul>
+            </li>
+            <li>開発環境のセットアップ
+                <ul>
+                    <li>MacOS上でPython仮想環境を構築。</li>
+                    <li>Flaskアプリの初期構造を作成し、動作確認。</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>手順：GitHubを活用した開発プロジェクト管理</h2>
+        <p>本日の作業を効率的に進めるために以下の手順を実施しました。</p>
+        <ul>
+            <li>リポジトリの初期化とREADME.mdの記載。</li>
+            <li>Markdown形式での仕様書作成。</li>
+            <li>GitHub Projectsでタスクの可視化と進捗管理。</li>
+            <li>Python仮想環境のセットアップと初期動作確認。</li>
+        </ul>
+
+        <!-- コメント欄 -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = window.location.href;  // ページURL
+                this.page.identifier = window.location.pathname;  // 一意の識別子
+            };
+
+            (function() {  // Disqusのスクリプトを挿入
+                var d = document, s = d.createElement('script');
+                s.src = 'https://portfolio-yldpk9tlxb.disqus.com/embed.js'; // shortnameをここに入力
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>コメントを表示するには、JavaScriptを有効にしてください。</noscript>
+        <!-- コメント欄終了 -->
+    </main>
+    <footer>
+        <div class="back-button-container">
+            <a href="../index.html" class="back-button">ホームに戻る</a>
+        </div>
+        <p>&copy; 2024 Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
