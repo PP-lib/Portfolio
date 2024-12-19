@@ -3,22 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
     <style>
-        /* レイアウト全体の調整 */
         main {
             display: flex;
-            justify-content: space-between; /* 自己紹介と記事一覧を左右に配置 */
+            justify-content: space-between;
             align-items: flex-start;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* 自己紹介セクションのスタイル */
+        .articles {
+            width: 65%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            flex-grow: 1;
+        }
+
+        .card-content h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .card-content a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .card-content a:hover {
+            color: #388E3C;
+        }
+
         .about-me {
-            width: 30%; /* 自己紹介を右側に配置 */
+            width: 30%;
             background-color: #f9f9f9;
             border-radius: 10px;
             padding: 20px;
@@ -53,7 +103,6 @@
             color: #444;
         }
 
-        /* イメージ図のスタイル */
         .author-image {
             max-width: 100px;
             margin: 0 auto 15px;
@@ -61,35 +110,15 @@
             border: 2px solid #ddd;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        /* 記事一覧のスタイル */
-        .articles {
-            width: 65%; /* 記事一覧を左側に配置 */
-        }
-
-        .card {
-            margin-bottom: 20px;
-        }
-
-        .card img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        .card-content {
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
     <header>
         <h1>Portfolio</h1>
-        <p>This is my portfolio / 私の技術構築記録のポートフォリオです。</p>
+        <p>私の技術構築記録のポートフォリオです。</p>
     </header>
     <main>
-        <!-- 記事一覧 -->
         <div class="articles">
-            <!-- No.1 記事 -->
             <div class="card">
                 <img src="images/image1.png" alt="GitHub Pages 構築記録">
                 <div class="card-content">
@@ -99,7 +128,6 @@
                 </div>
             </div>
 
-            <!-- No.2 記事 -->
             <div class="card">
                 <img src="images/image2.png" alt="マークダウン記述の基本">
                 <div class="card-content">
@@ -109,43 +137,38 @@
                 </div>
             </div>
 
-            <!-- No.3 記事 -->
             <div class="card">
                 <img src="images/image3.png" alt="Disqusを利用したコメント欄の導入と設定">
                 <div class="card-content">
                     <h3>8 Dec 2024: Disqusを利用したコメント欄の導入と設定</h3>
-                    <p>本記事では、GitHub PagesでホストしているサイトにDisqusを使ってコメント欄を導入する方法について解説します。</p>
+                    <p>GitHub PagesでホストしているサイトにDisqusを使ってコメント欄を導入する方法について解説します。</p>
                     <a href="articles/article3.html">続きを読む</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/image4.png" alt="GitHubとWebアプリ開発の効率的な管理方法">
+                <div class="card-content">
+                    <h3>9 Dec 2024: GitHubとWebアプリ開発の効率的な管理方法</h3>
+                    <p>Webアプリ開発プロジェクトにおけるGitHubを活用した効率的な管理方法について解説します。</p>
+                    <a href="articles/article4.html">続きを読む</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/image5.png" alt="生産性見える化アプリの概要と進行計画">
+                <div class="card-content">
+                    <h3>19 Dec 2024: 生産性見える化アプリの概要と進行計画</h3>
+                    <p>本アプリケーションは、生産データと勤務データを統合し、生産性の可視化やレポート作成を行うためのツールです。</p>
+                    <a href="articles/article5.html">続きを読む</a>
                 </div>
             </div>
         </div>
 
-        <!-- No.4 記事 -->
-        <div class="card">
-            <img src="images/image4.png" alt="GitHubとWebアプリ開発の効率的な管理方法<">
-            <div class="card-content">
-                <h3>9 Dec 2024: GitHubとWebアプリ開発の効率的な管理方法</h3>
-                <p>Webアプリ開発プロジェクトにおけるGitHubを活用した効率的な管理方法について解説します。</p>
-                <a href="articles/article4.html">続きを読む</a>
-            </div>
-        </div>
-        <!-- No.5 記事 -->
-        <div class="card">
-            <img src="images/image5.png" alt="生産性見える化アプリの概要と進行計画">
-            <div class="card-content">
-                <h3>19 Dec 2024: 生産性見える化アプリの概要と進行計画</h3>
-                <p>本アプリケーションは、生産データと勤務データを統合し、生産性の可視化やレポート作成を行うためのツールです。</p>
-                <a href="articles/article5.html">続きを読む</a>
-            </div>
-        </div>
-
-        </div>
-        <!-- 自己紹介 -->
         <section class="about-me">
             <h2>自己紹介</h2>
-            <!-- 作者のイメージ図 -->
             <img src="images/author_image.jpg" alt="作者のイメージ図" class="author-image">
-            <p><strong>名前:</strong> 米井一平 / YONEI IPPEI    </p>
+            <p><strong>名前:</strong> 米井一平 / YONEI IPPEI</p>
             <p>
                 <strong>プログラムスキル:</strong><br>
                 Python、Flask、HTML、JavaScript、CSS、その他。<br>
