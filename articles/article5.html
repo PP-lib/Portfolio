@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="生産性見える化アプリの概要と進行計画">
+    <meta name="author" content="ユーザー名">
+    <meta name="date" content="2024-12-19">
+    <meta name="tags" content="生産性, アプリ開発, 初期設計, Docker, レポート生成">
+    <meta name="description" content="生産性見える化アプリの開発概要とマイルストーンについて説明します。">
+    <title>生産性見える化アプリの概要と進行計画 | ポートフォリオ</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .back-button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .back-button:active {
+            background-color: #388E3C;
+            transform: scale(0.95);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        main h1, main h2, main h3 {
+            color: #333;
+        }
+
+        main p {
+            margin-bottom: 1em;
+        }
+
+        main ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        main li {
+            margin-bottom: 0.5em;
+        }
+
+        header p {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>生産性見える化アプリの概要と進行計画</h1>
+        <p><strong>執筆者:</strong> ユーザー名 | <strong>公開日:</strong> 2024-12-19</p>
+    </header>
+    <main id="content">
+        <article>
+
+            <section>
+                <h2>概要</h2>
+                <p>本アプリケーションは、生産データと勤務データを統合し、生産性の可視化やレポート作成を行うためのツールです。出退勤記録や生産重量を自動的に計算し、KPIを算出して視覚的に提供します。</p>
+            </section>
+
+            <section>
+                <h2>プロジェクトの進行計画</h2>
+                <p>以下のマイルストーンに基づき、開発を進めます。</p>
+                <ul>
+                    <li><strong>プロジェクト準備 (1週間以内)</strong>
+                        <ul>
+                            <li>Docker環境の設定</li>
+                            <li>リポジトリ構築と依存ライブラリのセットアップ</li>
+                        </ul>
+                    </li>
+                    <li><strong>データ統合モジュール開発 (3週間以内)</strong>
+                        <ul>
+                            <li>出退勤データと生産重量データの統合</li>
+                            <li>Workerマスタデータとの整合性チェック</li>
+                        </ul>
+                    </li>
+                    <li><strong>KPI計算モジュール開発 (5週間以内)</strong>
+                        <ul>
+                            <li>労働時間と生産性の計算ロジックを実装</li>
+                            <li>工程ごとのKPI集計</li>
+                        </ul>
+                    </li>
+                    <li><strong>可視化モジュール開発 (6週間以内)</strong>
+                        <ul>
+                            <li>Matplotlibを用いたKPIグラフの生成</li>
+                            <li>グラフのPNG出力機能</li>
+                        </ul>
+                    </li>
+                    <li><strong>レポート作成および印刷 (7週間以内)</strong>
+                        <ul>
+                            <li>Excel形式のレポート生成</li>
+                            <li>自動印刷機能の実装</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Docker設定の概要</h2>
+                <pre>
+# Dockerfile
+FROM python:3.10
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+CMD ["python", "main.py"]
+                </pre>
+                <p>Docker Composeを使用して開発環境を統一化し、効率的なチーム開発を実現します。</p>
+            </section>
+
+            <section>
+                <h2>次のステップ</h2>
+                <p>今後の開発予定：</p>
+                <ul>
+                    <li>データ統合モジュールの実装とテスト</li>
+                    <li>KPI計算ロジックの詳細設計</li>
+                    <li>可視化デザインとレポート出力の確認</li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- コメント欄 -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = window.location.href;  // ページURL
+                this.page.identifier = window.location.pathname;  // 一意の識別子
+            };
+
+            (function() {  // Disqusのスクリプトを挿入
+                var d = document, s = d.createElement('script');
+                s.src = 'https://portfolio-yldpk9tlxb.disqus.com/embed.js'; // shortnameをここに入力
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>コメントを表示するには、JavaScriptを有効にしてください。</noscript>
+        <!-- コメント欄終了 -->
+    </main>
+
+    <footer>
+        <div class="back-button-container">
+            <a href="../index.html" class="back-button">ホームに戻る</a>
+        </div>
+        <p>&copy; 2024 ポートフォリオサイト | <a href="../contact.html">お問い合わせ</a></p>
+    </footer>
+</body>
+</html>
