@@ -9,7 +9,7 @@
         /* レイアウト全体の調整 */
         main {
             display: flex;
-            justify-content: space-between; /* 自己紹介と記事一覧を左右に配置 */
+            justify-content: space-between;
             align-items: flex-start;
             max-width: 1200px;
             margin: 0 auto;
@@ -18,66 +18,66 @@
 
         /* 自己紹介セクションのスタイル */
         .about-me {
-            width: 30%; /* 自己紹介を右側に配置 */
+            width: 18%; /* 幅を縮小 */
             background-color: #f9f9f9;
             border-radius: 10px;
-            padding: 20px;
+            padding: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
-        .about-me h2 {
-            font-size: 1.8rem;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .about-me p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        .about-me ul {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-
-        .about-me ul li {
-            background-color: #fff;
-            padding: 10px 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            color: #444;
-        }
-
-        /* イメージ図のスタイル */
         .author-image {
-            max-width: 100px;
+            max-width: 80%; /* 枠内に収める */
+            height: auto;
             margin: 0 auto 15px;
             border-radius: 50%;
             border: 2px solid #ddd;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         /* 記事一覧のスタイル */
         .articles {
-            width: 65%; /* 記事一覧を左側に配置 */
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .card {
-            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
         .card img {
-            max-width: 100%;
-            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .card-content {
-            margin-top: 10px;
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .card-content a {
+            font-size: 0.9rem;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .card-content a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -118,36 +118,33 @@
                     <a href="articles/article3.html">続きを読む</a>
                 </div>
             </div>
-        </div>
 
-        <!-- No.4 記事 -->
-        <div class="card">
-            <img src="images/image4.png" alt="GitHubとWebアプリ開発の効率的な管理方法<">
-            <div class="card-content">
-                <h3>9 Dec 2024: GitHubとWebアプリ開発の効率的な管理方法<</h3>
-                <p>Webアプリ開発プロジェクトにおけるGitHubを活用した効率的な管理方法について解説します。</p>
-                <a href="articles/article4.html">続きを読む</a>
+            <!-- No.4 記事 -->
+            <div class="card">
+                <img src="images/image4.png" alt="GitHubとWebアプリ開発の効率的な管理方法">
+                <div class="card-content">
+                    <h3>9 Dec 2024: GitHubとWebアプリ開発の効率的な管理方法</h3>
+                    <p>Webアプリ開発プロジェクトにおけるGitHubを活用した効率的な管理方法について解説します。</p>
+                    <a href="articles/article4.html">続きを読む</a>
+                </div>
+            </div>
+
+            <!-- No.5 記事 -->
+            <div class="card">
+                <img src="images/image5.webp" alt="最小単位Dockerの導入テスト">
+                <div class="card-content">
+                    <h3>28 Dec 2024: 最小単位Dockerの導入テスト</h3>
+                    <p>dockerの簡単な立ち上げ確認の結果についての覚書です</p>
+                    <a href="articles/article5.html">続きを読む</a>
+                </div>
             </div>
         </div>
 
-        <!-- No.5 記事 -->
-        <div class="card">
-            <img src="images/image5.webp" alt="最小単位Dockerの導入テスト">
-            <div class="card-content">
-                <h3>28 Dec 2024: 最小単位Dockerの導入テスト</h3>
-                <p>dockerの簡単な立ち上げ確認の結果についての覚書です</p>
-                <a href="articles/article5.html">続きを読む</a>
-            </div>
-        </div>
-
-
-        </div>
         <!-- 自己紹介 -->
         <section class="about-me">
             <h2>自己紹介</h2>
-            <!-- 作者のイメージ図 -->
             <img src="images/author_image.jpg" alt="作者のイメージ図" class="author-image">
-            <p><strong>名前:</strong> 米井一平 / YONEI IPPEI    </p>
+            <p><strong>名前:</strong> 米井一平 / YONEI IPPEI</p>
             <p>
                 <strong>プログラムスキル:</strong><br>
                 Python、Flask、HTML、JavaScript、CSS、その他。<br>
